@@ -6,6 +6,7 @@ mod lexer;
 mod parser;
 mod utils;
 mod value;
+mod sort;
 
 #[cfg(test)]
 mod tests;
