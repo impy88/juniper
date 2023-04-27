@@ -496,7 +496,7 @@ where
                     // This hack is required as Juniper doesn't allow at the
                     // moment for custom defined types to tweak into resolving.
                     // TODO: Redesign resolving layer to allow such things.
-                    #[cfg(feature = "json")]
+                    #[cfg(feature = "serde_json")]
                     Ok(Value::Null)
                         if meta_field.field_type.is_non_null()
                             && meta_field.field_type.name() == Some("Json") =>

@@ -272,7 +272,7 @@ where
                         // moment for custom defined types to tweak into
                         // resolving.
                         // TODO: Redesign resolving layer to allow such things.
-                        #[cfg(feature = "json")]
+                        #[cfg(feature = "serde_json")]
                         Ok(Value::Null)
                             if is_non_null && meta_field.field_type.name() == Some("Json") =>
                         {

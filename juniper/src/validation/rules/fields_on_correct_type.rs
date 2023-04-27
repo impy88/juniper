@@ -61,7 +61,7 @@ where
                     // This hack is required as Juniper doesn't allow at the
                     // moment for custom defined types to tweak into validation.
                     // TODO: Redesign validation layer to allow such things.
-                    #[cfg(feature = "json")]
+                    #[cfg(feature = "serde_json")]
                     if type_name == "Json" {
                         return;
                     }

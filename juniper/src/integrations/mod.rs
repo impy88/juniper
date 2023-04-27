@@ -6,7 +6,7 @@ pub mod bson;
 pub mod chrono;
 #[cfg(feature = "chrono-tz")]
 pub mod chrono_tz;
-#[cfg(feature = "json")]
+#[cfg(feature = "serde_json")]
 pub mod json;
 #[doc(hidden)]
 pub mod serde;

@@ -22,7 +22,7 @@ where
                 // This hack is required as Juniper doesn't allow at the moment
                 // for custom defined types to tweak into parsing validation.
                 // TODO: Redesign parsing layer to allow such things.
-                #[cfg(feature = "json")]
+                #[cfg(feature = "serde_json")]
                 if let TypeType::Concrete(t) = &**inner {
                     if let MetaType::Scalar(ScalarMeta { name, .. }) = t {
                         if name == "Json" {
@@ -68,7 +68,7 @@ where
             // This hack is required as Juniper doesn't allow at the moment
             // for custom defined types to tweak into parsing validation.
             // TODO: Redesign parsing layer to allow such things.
-            #[cfg(feature = "json")]
+            #[cfg(feature = "serde_json")]
             if let MetaType::Scalar(ScalarMeta { name, .. }) = t {
                 if name == "Json" {
                     if let Some(parse_fn) = t.input_value_parse_fn() {
